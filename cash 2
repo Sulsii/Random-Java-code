@@ -1,0 +1,70 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+class CashRegister {
+
+    double PENNIES = 0.01;
+    double NICKELS = 0.05;
+    double DIMES = 0.10;
+    double QUARTERS = 0.25;
+    double DOLLARS = 1.00;
+    double FIVES = 5.00;
+    double TENS = 10.00;
+    double TWENTIES = 20.00;
+    double FIFTIES = 50.00;
+    double HUNDREDS = 100.00;
+    double price = 10;
+    
+    
+
+    void List() {
+        System.out.println("Currency: " + PENNIES + ", " + NICKELS + ", " + DIMES + ", " + QUARTERS + ", " + 
+        DOLLARS + ", " + FIVES + ", " + TENS + ", " + TWENTIES + ", " + FIFTIES + ", " + HUNDREDS);
+    }
+    
+    void newprice(double Price){
+       price = Price;
+    }
+
+     double calculateChange(double cashowed) {
+         return cashowed - price;
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        CashRegister input = new CashRegister();
+        
+        
+        System.out.println(input.calculateChange(5));
+        input.newprice(5);
+        
+        System.out.println(input.calculateChange(5));
+        
+        
+        
+       /* Scanner input = new Scanner(System.in);
+
+        int pennies, nickels, dimes, quarters, ones, fives, tens, twenties;
+        double cash, finaltotal, cashowed; 
+
+        List();
+        System.out.print("Enter price or 0 to quit: ");
+        double price = input.nextDouble();
+
+        if (price == 0) {
+            System.out.println("Program Ended.");
+            return;
+        }
+
+        System.out.print("Enter amount of cash given: ");
+        cash = input.nextDouble();
+
+        cashowed = cash - price;
+        System.out.printf("CHANGE OWED: %.2f%n", cashowed);
+
+        calculateChange(cashowed);*/
+    }
+
+}
